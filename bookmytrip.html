@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BookMyTrip - Hotels, Flights and Holidays</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="bookmytrip.css">
+</head>
+<body>
+
+  <!-- Top Header -->
+  <header class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="logo">
+        <a href="#">bookmy<span>trip<small>.com</small></span></a>
+      </div>
+
+      <div class="header-right">
+        <div class="support">
+          <div class="phone-circle">&#9742;</div>
+          <div class="support-text">
+            <span>Call 24/7 Support</span>
+            <strong>+91 9655918105 </strong>
+          </div>
+        </div>
+        <form class="search-form" onsubmit="return false">
+          <input type="text" placeholder="Search entire website here">
+          <button type="submit" aria-label="Search">&#128269;</button>
+        </form>
+      </div>
+    </div>
+  </header>
+
+  <!-- Navigation Menu -->
+  <nav class="navbar">
+    <div class="container nav-inner">
+      <button class="mobile-toggle" id="menuToggle">&#9776; <span>Home</span></button>
+      <ul class="nav-links" id="menu">
+        <li class="has-dropdown">
+          <a href="#">Hotels</a>
+          <ul class="dropdown">
+            <li><a href="#">Hotels in India</a></li>
+            <li><a href="#">International Hotels</a></li>
+            <li><a href="#">International Hostels</a></li>
+            <li><a href="#">Popular Hotels in Asia</a></li>
+            <li><a href="#">Popular Hotels in Europe</a></li>
+            <li><a href="#">Activities</a></li>
+            <li><a href="#">Hotel Deals of the Week</a></li>
+          </ul>
+        </li>
+        <li><a href="#">Flights</a></li>
+        <li><a href="#">Vacations</a></li>
+        <li><a href="#">Hot Deals</a></li>
+        <li><a href="#">Travel Guides</a></li>
+        <li><a href="#">Blogs</a></li>
+      </ul>
+      <div class="nav-auth">
+        <a href="#" class="btn-auth">SIGN IN</a>
+        <a href="#" class="btn-auth">MY ACCOUNT</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Banner with Booking Tab -->
+  <section class="hero-section">
+    <div class="container hero-container">
+      <div class="hero-card" id="heroCard">
+        <h2 id="heroTitle">Paris Hilton Hotel, Mumbai, India</h2>
+        <p id="heroDesc">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.</p>
+        <div class="hero-price-badge">
+          <span class="price" id="heroPrice">$1200</span>
+          <span class="detail">Inclusive of food, dinner</span>
+        </div>
+      </div>
+
+      <!-- Booking Form Bar -->
+      <div class="booking-wrapper">
+        <div class="booking-tab">Book Your Trip</div>
+        <form class="booking-form" id="bookingForm">
+          <div class="form-group">
+            <label>What?</label>
+            <select id="bookWhat">
+              <option>Hotel</option>
+              <option>Flight</option>
+              <option>Vacation</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Where?</label>
+            <select id="bookWhere">
+              <option value="">Location</option>
+              <option>Mumbai</option>
+              <option>Zurich</option>
+              <option>Melbourne</option>
+              <option>Paris</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>When?</label>
+            <input type="date" id="tripDate">
+          </div>
+
+          <div class="form-group form-who">
+            <label>Who?</label>
+            <div class="who-selects">
+              <select><option>Rooms 0</option><option>Rooms 1</option><option>Rooms 2</option></select>
+              <select><option>Adults 0</option><option>Adults 1</option><option>Adults 2</option><option>Adults 3</option></select>
+              <select><option>Children 0</option><option>Children 1</option><option>Children 2</option></select>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-search">SEARCH</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Content Section -->
+  <main class="main-content">
+    <div class="container">
+
+      <!-- Popular Hotels -->
+      <div class="section-title-row">
+        <h3>Popular Hotels</h3>
+        <span class="section-line"></span>
+        <div class="arrow-controls">
+          <button id="prevBtn" aria-label="Previous">&lsaquo;</button>
+          <button id="nextBtn" aria-label="Next">&rsaquo;</button>
+        </div>
+      </div>
+
+      <div class="hotel-grid" id="hotelGrid">
+        <article class="hotel-card" data-title="Hotel Tajmahal Palace" data-location="Mumbai, India" data-price="$2000" data-img="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=1200&auto=format&fit=crop">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1566073771259-6a8506099945?w=500&auto=format&fit=crop');"></div>
+          <div class="card-body">
+            <div class="meta">
+              <h4>Hotel Tajmahal Palace</h4>
+              <p>Mumbai, India</p>
+            </div>
+            <div class="price-tag">$2000</div>
+          </div>
+        </article>
+
+        <article class="hotel-card" data-title="Mont Blanc" data-location="Zurich, Switzerland" data-price="$3200" data-img="https://images.unsplash.com/photo-1582719508461-905c673771fd?w=1200&auto=format&fit=crop">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1582719508461-905c673771fd?w=500&auto=format&fit=crop');"></div>
+          <div class="card-body">
+            <div class="meta">
+              <h4>Mont Blanc</h4>
+              <p>Zurich, Switzerland</p>
+            </div>
+            <div class="price-tag">$3200</div>
+          </div>
+        </article>
+
+        <article class="hotel-card" data-title="Hotel Mariott" data-location="Melbourne, Australia" data-price="$1200" data-img="https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=1200&auto=format&fit=crop">
+          <div class="card-thumb" style="background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?w=500&auto=format&fit=crop');"></div>
+          <div class="card-body">
+            <div class="meta">
+              <h4>Hotel Mariott</h4>
+              <p>Melbourne, Australia</p>
+            </div>
+            <div class="price-tag">$1200</div>
+          </div>
+        </article>
+      </div>
+
+      <!-- Hot Deals -->
+      <div class="section-title-row deals-row">
+        <h3>Hot Deals</h3>
+        <span class="section-line"></span>
+      </div>
+
+      <div class="deals-grid">
+        <div class="deal-card deal-left" style="background-image: linear-gradient(rgba(0,0,0,0.35), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1502602898657-3e91760cbb34?w=700&auto=format&fit=crop');">
+          <span class="badge-corner badge-discount">%25</span>
+          <span class="deal-price-top">From $350</span>
+          <h3>PARIS EUROSTAR BREAKS</h3>
+          <p>CURABITUR FRINGILLA MAURIS INTERDUM NEC MAGNA</p>
+        </div>
+
+        <div class="deal-card deal-right" style="background-image: linear-gradient(rgba(0,0,0,0.25), rgba(0,0,0,0.45)), url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=700&auto=format&fit=crop');">
+          <span class="badge-corner badge-gift">&#127873;</span>
+          <span class="deal-lead-italic">TRAVELS TO HONGKONG</span>
+          <p>CURABITUR FRINGILLA MAURIS INTERDUM NEC MAGNA<br>TUR FRINGILLA MAURIS INTERDUM NEC MAGNA</p>
+        </div>
+      </div>
+
+      <!-- Latest Blogs -->
+      <div class="blogs-bar">
+        <strong>Latest Blogs</strong>
+        <a href="#">Best places to visit in India</a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-grid">
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="#">About the company</a>
+        <a href="#">Terms and Conditions</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Career</a>
+        <a href="#">Address</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Customer Support</h5>
+        <a href="#">Contact</a>
+        <a href="#">FAQ</a>
+      </div>
+
+      <div class="footer-col">
+        <h5>Follow us</h5>
+        <div class="social-links">
+          <a href="#" aria-label="Facebook">f</a>
+          <a href="#" aria-label="Twitter">t</a>
+          <a href="#" aria-label="LinkedIn">in</a>
+          <a href="#" aria-label="YouTube">&#9654;</a>
+          <a href="#" aria-label="Google Plus">g+</a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Don't miss our deals and offers</h5>
+        <form class="subscribe-form" id="subForm">
+          <input type="email" id="subEmail" placeholder="Enter your email id" required>
+          <button type="submit">SUBSCRIBE</button>
+        </form>
+        <p class="subscribe-msg" id="subMsg"></p>
+      </div>
+    </div>
+    <div class="container copyright">
+      copyright(c) 2013, All rights reserved
+    </div>
+  </footer>
+
+  <script src="bookmytrip.js"></script>
+</body>
+</html>
